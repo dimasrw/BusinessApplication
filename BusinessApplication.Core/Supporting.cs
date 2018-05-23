@@ -2,6 +2,10 @@
 
 namespace BusinessApplication.Core
 {
+    public interface ILoggingDataSink
+    {
+    }
+
     public interface ILoggingComponent
     {
     }
@@ -14,7 +18,7 @@ namespace BusinessApplication.Core
     {
     }
 
-    internal class LoggingDataSink
+    internal class LoggingDataSink : ILoggingDataSink
     {
     }
 
