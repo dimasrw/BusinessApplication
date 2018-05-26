@@ -26,7 +26,7 @@ namespace BusinessApplication.Core
     {
         public LoggingComponent(LoggingDataSink loggingDataSink)
         {
-            throw new NotImplementedException();
+            
         }
     }
 
@@ -34,7 +34,7 @@ namespace BusinessApplication.Core
     {
         public WebServiceProxy(string webServiceAddress)
         {
-            throw new NotImplementedException();
+            
         }
     }
 
