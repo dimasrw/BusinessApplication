@@ -20,5 +20,17 @@ namespace BusinessApplication.UnitTests
             actual = kernel.Get<BusinessService>();
             Assert.IsNotNull(actual);
         }
+
+        [Test]
+        public void ShouldBeAbleToGetPersonServiceAndGetPerson()
+        {
+            var expected = new Person { Id = 1, FirstName = "John", LastName = "Doe" };
+            var kernel = new StandardKernel(new CoreModule());
+            var personService = kernel.Get<PersonService>();
+            var actual = personService.GetPerson(expected.Id);
+            Assert.AreEqual(expected.Id, actual.Id);
+            Assert.AreEqual(expected.FirstName, actual.FirstName);
+            Assert.AreEqual(expected.LastName, actual.LastName);
+        }
     }
 }

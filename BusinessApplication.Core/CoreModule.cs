@@ -17,6 +17,8 @@ namespace BusinessApplication.Core
             Bind<ILoggingComponent>().To<LoggingComponent>();
             Bind<IDataAccessComponent>().ToProvider(new DataAccessComponentProvider());
             Bind<IWebServiceProxy>().ToProvider(new WebServiceProxyComponentProvider());
+            Bind<IPersonRespository>().To<PersonRespository>();
+            Bind<IPersonService>().To<PersonService>();
         }
     }
 
